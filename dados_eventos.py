@@ -1,3 +1,32 @@
+import datetime
+def formatar_data(eventos):
+    formatos_entrada = [
+        "%Y-%m-%d",  
+        "%m/%d/%Y",  
+        "%d-%m-%Y",  
+        "%d/%m/%Y",  
+    ]
+    for evento in eventos:
+        data_str = evento.get('data') 
+        if data_str:
+            data_valida = False
+            for fmt in formatos_entrada:
+                try:
+                    data_obj = datetime.datetime.strptime(data_str, fmt)
+                    evento['data'] = data_obj.strftime("%d/%m/%Y")
+                    data_valida = True
+                    break 
+                except ValueError:
+                    continue
+
+            if not data_valida:
+                print(f"Data inválida encontrada para o evento '{evento['nome']}': '{data_str}'. A data não será formatada.")
+                evento['data'] = "Data Inválida"
+        else:
+            print(f" O evento '{evento.get('nome', 'Nome Desconhecido')}' não possui a chave 'data'.")
+
+    return eventos
+    
 
 eventos = [
     {
