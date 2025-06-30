@@ -1,4 +1,4 @@
-
+from apagar_terminal import clear
 import funcoes_relatorios as FuncoesRelatorios
 
 def executar_menu_relatorios(eventos, dados_participantes):
@@ -36,7 +36,8 @@ def executar_menu_relatorios(eventos, dados_participantes):
         '3': ("Contar Eventos por Tema", _contar_eventos_por_tema),
         '4': ("Taxa Média de Participação por Tema", _media_participacao),
         '5': ("Eventos com Baixa Participação (Relatório)", _relatorio_baixa_participacao),
-        '6': ("Voltar ao Menu Principal", None)
+        '6': ("Apagar Terminal", clear),
+        '7': ("Voltar ao Menu Principal", None)
     }
 
     while True:

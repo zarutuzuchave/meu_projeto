@@ -1,4 +1,5 @@
 import funcoes_participantes as GerenciadorParticipantes
+from apagar_terminal import clear
 
 def executar_menu_gerenciar_participantes(eventos, dados_participantes):
 
@@ -23,7 +24,8 @@ def executar_menu_gerenciar_participantes(eventos, dados_participantes):
         '2': ("Buscar Participante por Código", _buscar_participante),
         '3': ("Atualizar E-mail do Participante", _atualizar_email),
         '4': ("Remover Participantes Duplicados", _remover_duplicados),
-        '5': ("Voltar ao Menu Principal", None)
+        '5': ("Apagar Terminal", clear),
+        '6': ("Voltar ao Menu Principal", None)
     }
 
     while True:

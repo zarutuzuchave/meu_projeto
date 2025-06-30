@@ -32,7 +32,7 @@ def formatar_data(eventos):
 def carregar_dados_eventos(nome_arquivo='banco_de_dados.json'):
     try:
         with open(nome_arquivo, 'r', encoding='utf-8') as f:
-            dados = json.load()
+            dados = json.load(fp=f)
             eventos_carregados = formatar_data(dados.get('eventos', []))
             return eventos_carregados
     except FileNotFoundError:
