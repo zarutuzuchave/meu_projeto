@@ -1,22 +1,25 @@
 
 import funcoes_eventos as GerenciadorEventos
 
-def executar_menu_gerenciar_eventos(eventos, dados_participantes):
+def executar_menu_gerenciar_eventos(eventos, dados_participantes): # Recebe dados_participantes
 
     def _adicionar_evento():
         nome = input("Nome do evento: ")
         data = input("Data do evento (AAAA-MM-DD): ")
         tema = input("Tema do evento: ")
-        GerenciadorEventos.adicionar_evento(eventos, nome, data, tema)
+        # Agora adicionar_evento precisa dos participantes para salvar
+        GerenciadorEventos.adicionar_evento(eventos, dados_participantes, nome, data, tema)
 
     def _remover_evento():
         nome_evento = input("Nome do evento para remover: ")
-        GerenciadorEventos.remover_evento(eventos, nome_evento)
+        # Agora remover_evento precisa dos participantes para salvar
+        GerenciadorEventos.remover_evento(eventos, dados_participantes, nome_evento)
 
     def _atualizar_tema():
         nome_evento = input("Nome do evento para atualizar o tema: ")
         novo_tema = input("Novo tema: ")
-        GerenciadorEventos.atualizar_tema_evento(eventos, nome_evento, novo_tema)
+        # Agora atualizar_tema_evento precisa dos participantes para salvar
+        GerenciadorEventos.atualizar_tema_evento(eventos, dados_participantes, nome_evento, novo_tema)
 
     def _agrupar():
         agrupados = GerenciadorEventos.agrupar_eventos_por_tema(eventos)

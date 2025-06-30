@@ -1,0 +1,103 @@
+{
+  "eventos": [
+    {
+      "nome": "Workshop de Fundamentos de Python",
+      "data": "2025-07-10",
+      "tema": "Web",
+      "participantes": ["P001", "P002", "P003", "P005"]
+    },
+    {
+      "nome": "Seminário de IA na Saúde",
+      "data": "2025-07-15",
+      "tema": "Inteligência Artificial",
+      "participantes": ["P001", "P004", "P006"]
+    },
+    {
+      "nome": "Fundamentos de Cibersegurança",
+      "data": "2025-07-20",
+      "tema": "Segurança",
+      "participantes": ["P002", "P005"]
+    },
+    {
+      "nome": "Bootcamp de Desenvolvimento Web",
+      "data": "2025-08-01",
+      "tema": "Web",
+      "participantes": ["P001", "P003", "P004", "P007"]
+    },
+    {
+      "nome": "Meetup de Ciência de Dados",
+      "data": "2025-08-05",
+      "tema": "Inteligência Artificial",
+      "participantes": ["P002", "P006", "P008"]
+    },
+    {
+      "nome": "Essenciais de Redes",
+      "data": "2025-08-10",
+      "tema": "Segurança",
+      "participantes": ["P009"]
+    }
+  ],
+  "participantes": [
+    {
+      "codigo": "P001",
+      "nome_completo": "Alice Silva",
+      "email": "alice.s@example.com",
+      "preferencias_tematicas": ["Web", "Inteligência Artificial"]
+    },
+    {
+      "codigo": "P002",
+      "nome_completo": "Bruno Costa",
+      "email": "bruno.c@example.com",
+      "preferencias_tematicas": ["Segurança", "Web"]
+    },
+    {
+      "codigo": "P003",
+      "nome_completo": "Carlos Oliveira",
+      "email": "carlos.o@example.com",
+      "preferencias_tematicas": ["Web"]
+    },
+    {
+      "codigo": "P004",
+      "nome_completo": "Diana Santos",
+      "email": "diana.s@example.com",
+      "preferencias_tematicas": ["Inteligência Artificial", "Web"]
+    },
+    {
+      "codigo": "P005",
+      "nome_completo": "Eduarda Almeida",
+      "email": "eduarda.a@example.com",
+      "preferencias_tematicas": ["Segurança", "Web"]
+    },
+    {
+      "codigo": "P006",
+      "nome_completo": "Felipe Rocha",
+      "email": "felipe.r@example.com",
+      "preferencias_tematicas": ["Inteligência Artificial"]
+    },
+    {
+      "codigo": "P007",
+      "nome_completo": "Giovana Souza",
+      "email": "giovana.s@example.com",
+      "preferencias_tematicas": ["Web"]
+    },
+    {
+      "codigo": "P008",
+      "nome_completo": "Hugo Fernandes",
+      "email": "hugo.f@example.com",
+      "preferencias_tematicas": ["Inteligência Artificial"]
+    },
+    {
+      "codigo": "P009",
+      "nome_completo": "Isabela Gomes",
+      "email": "isabela.g@example.com",
+      "preferencias_tematicas": ["Segurança"]
+    },
+    {
+      "codigo": "P010",
+      "nome_completo": "Alice Silva Duplicada",
+      "email": "alice.dup@example.com",
+      "preferencias_tematicas": ["Web"]
+    }
+  ]
+}
+

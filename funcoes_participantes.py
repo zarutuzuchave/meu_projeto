@@ -1,3 +1,4 @@
+import funcoes_eventos as GerenciadorEventos
 
 def mostrar_participantes_em_evento(eventos, dados_participantes, nome_evento):
     evento_encontrado = False
@@ -34,16 +35,17 @@ def buscar_participante(participantes, codigo_participante):
         print(f"Participante com o código '{codigo_participante}' não encontrado.")
     return encontrado
 
-def atualizar_email_participante(participantes, codigo_participante, novo_email):
+def atualizar_email_participante(eventos, participantes, codigo_participante, novo_email):
     for participante in participantes:
         if participante['codigo'] == codigo_participante:
             participante['email'] = novo_email
             print(f"E-mail do participante '{codigo_participante}' atualizado para '{novo_email}'.")
+            GerenciadorEventos.salvar_dados(eventos, participantes) 
             return True
     print(f"Participante com o código '{codigo_participante}' não encontrado.")
     return False
 
-def remover_participantes_duplicados(participantes):
+def remover_participantes_duplicados(eventos, participantes):
     codigos_vistos = set()
     participantes_unicos = []
     contador_removidos = 0
@@ -58,6 +60,7 @@ def remover_participantes_duplicados(participantes):
 
     if contador_removidos > 0:
         print(f"Removido(s) {contador_removidos} registro(s) duplicado(s) de participante.")
+        GerenciadorEventos.salvar_dados(eventos, participantes_unicos) 
     else:
         print("Nenhum participante duplicado encontrado.")
     return participantes_unicos

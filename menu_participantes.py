@@ -1,7 +1,7 @@
-
 import funcoes_participantes as GerenciadorParticipantes
 
 def executar_menu_gerenciar_participantes(eventos, dados_participantes):
+
     def _listar_em_evento():
         nome_evento = input("Digite o nome do evento: ")
         GerenciadorParticipantes.mostrar_participantes_em_evento(eventos, dados_participantes, nome_evento)
@@ -13,10 +13,10 @@ def executar_menu_gerenciar_participantes(eventos, dados_participantes):
     def _atualizar_email():
         codigo_participante = input("Digite o código do participante: ")
         novo_email = input("Digite o novo e-mail: ")
-        GerenciadorParticipantes.atualizar_email_participante(dados_participantes, codigo_participante, novo_email)
+        GerenciadorParticipantes.atualizar_email_participante(eventos, dados_participantes, codigo_participante, novo_email)
 
     def _remover_duplicados():
-        dados_participantes[:] = GerenciadorParticipantes.remover_participantes_duplicados(dados_participantes)
+        dados_participantes[:] = GerenciadorParticipantes.remover_participantes_duplicados(eventos, dados_participantes)
 
     opcoes_menu = {
         '1': ("Listar Participantes em um Evento", _listar_em_evento),
@@ -28,7 +28,7 @@ def executar_menu_gerenciar_participantes(eventos, dados_participantes):
 
     while True:
         print("\n--- Gerenciar Participantes ---")
-        for chave, (descricao) in opcoes_menu.items():
+        for chave, (descricao, _) in opcoes_menu.items(): 
             print(f"{chave}. {descricao}")
 
         escolha = input("Digite sua escolha: ")
