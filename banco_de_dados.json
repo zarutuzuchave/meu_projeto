@@ -1,7 +1,7 @@
 {
   "eventos": [
     {
-      "nome": "Workshop de Fundamentos de Python",
+      "nome": "Workshop de Fundamentos de Python ",
       "data": "2025-07-10",
       "tema": "Web",
       "participantes": ["P001", "P002", "P003", "P005"]
