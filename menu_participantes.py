@@ -21,11 +21,12 @@ def executar_menu_gerenciar_participantes(eventos, dados_participantes):
 
     opcoes_menu = {
         '1': ("Listar Participantes em um Evento", _listar_em_evento),
-        '2': ("Buscar Participante por Código", _buscar_participante),
-        '3': ("Atualizar E-mail do Participante", _atualizar_email),
-        '4': ("Remover Participantes Duplicados", _remover_duplicados),
-        '5': ("Apagar Terminal", clear),
-        '6': ("Voltar ao Menu Principal", None)
+        '2': ("Adicionar Participante", GerenciadorParticipantes.adicionar_participante),
+        '3': ("Buscar Participante por Código", _buscar_participante),
+        '4': ("Atualizar E-mail do Participante", _atualizar_email),
+        '5': ("Remover Participantes Duplicados", _remover_duplicados),
+        '6': ("Apagar Terminal", clear),
+        '7': ("Voltar ao Menu Principal", None)
     }
 
     while True:

@@ -34,7 +34,7 @@ def adicionar_evento(eventos, participantes, nome, data, tema, lista_participant
         "participantes": lista_participantes_evento if lista_participantes_evento is not None else []
     }
     eventos.append(novo_evento)
-    salvar_dados(eventos, participantes) # Salva após adicionar
+    salvar_dados(eventos, participantes)
     print(f"Evento '{nome}' adicionado com sucesso.")
     return True
 
@@ -43,7 +43,7 @@ def remover_evento(eventos, participantes, nome_evento):
     eventos[:] = [evento for evento in eventos if evento['nome'] != nome_evento]
     if len(eventos) < tamanho_original:
         print(f"Evento '{nome_evento}' removido com sucesso.")
-        salvar_dados(eventos, participantes) # Salva após remover
+        salvar_dados(eventos, participantes) 
         return True
     else:
         print(f"Evento '{nome_evento}' não encontrado.")

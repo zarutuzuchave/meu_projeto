@@ -1,4 +1,6 @@
 import funcoes_eventos as GerenciadorEventos
+from funcoes_eventos import salvar_dados
+
 
 def mostrar_participantes_em_evento(eventos, dados_participantes, nome_evento):
     evento_encontrado = False
@@ -22,6 +24,18 @@ def mostrar_participantes_em_evento(eventos, dados_participantes, nome_evento):
             break
     if not evento_encontrado:
         print(f"Evento '{nome_evento}' não encontrado.")
+def adicionar_participante(novo_participante, participantes, codigo, nome_completo, email , lista_temas=None):
+    
+    novo_participante = {
+        "codigo": codigo,
+        "nome_completo": nome_completo,
+        "email": email,
+        "preferencias_tematicas": lista_temas if lista_temas is not None else [],
+    }
+    participantes.append(novo_participante)
+    salvar_dados(participantes)
+    print(f"Participante '{nome_completo}' adicionado com sucesso.")
+    return True
 
 def buscar_participante(participantes, codigo_participante):
     encontrado = next(filter(lambda p: p['codigo'] == codigo_participante, participantes), None)
@@ -64,3 +78,4 @@ def remover_participantes_duplicados(eventos, participantes):
     else:
         print("Nenhum participante duplicado encontrado.")
     return participantes_unicos
+
